@@ -2,13 +2,13 @@
 #include <stdlib.h>
 struct dugum{
    int icerik;
-   struct dugum*sonraki
+   struct dugum*sonraki;
    };
 
 
     void ekranayazdugumu(struct dugum*q){
-    while(q->sonraki!=NULL){
-        printf("%d",q->icerik);
+    while(q!=NULL){
+        printf("%d\n",q->icerik);
         q=q->sonraki;
     }
     }
@@ -53,17 +53,16 @@ int main()
 { struct dugum*listebasi;
 listebasi=(struct dugum*)malloc (sizeof (struct dugum));
 listebasi=NULL;
-siraliekle(25,listebasi);
-ekranayazdugumu(listebasi);
-siraliekle(1,listebasi);
-siraliekle(190,listebasi);
-siraliekle(6,listebasi);
-siraliekle(66,listebasi);
-siraliekle(100,listebasi);
-siraliekle(999,listebasi);
-siraliekle(99,listebasi);
-siraliekle(66,listebasi);
-siraliekle(61,listebasi);
+siraliekle(25,&listebasi);
+siraliekle(1,&listebasi);
+siraliekle(190,&listebasi);
+siraliekle(6,&listebasi);
+siraliekle(100,&listebasi);
+siraliekle(999,&listebasi);
+siraliekle(99,&listebasi);
+siraliekle(66,&listebasi);
+siraliekle(61,&listebasi);
+siraliekle(50,&listebasi);
 ekranayazdugumu(listebasi);
 
 
